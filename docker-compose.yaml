@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  wildfly:
+    build: .
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+      - "31500:31500"
+    environment:
+      - ENV=production
+    network_mode: bridge
